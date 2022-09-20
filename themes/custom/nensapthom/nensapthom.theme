@@ -29,3 +29,7 @@ function nensapthom_preprocess_page(&$variables, &$form_state){
     // print_r($variables['route_name']);
     // die();
 }
+
+function nensapthom_preprocess_html($variables){
+  $variables['attributes']['route-name'] = \Drupal::routeMatch()->getRouteName();
+}
