@@ -3,12 +3,14 @@
 @import "./reset/_reset_css.scss";
 
 // Boostrap
-@import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css";
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css";
 
 // General
 @import "./general/_general";
 
 // Header
+@import "./header/header_front";
+@import "./header/header";
 
 // Body
 
