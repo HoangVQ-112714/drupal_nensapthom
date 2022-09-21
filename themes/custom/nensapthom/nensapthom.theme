@@ -4,8 +4,8 @@
  *
  */
 function nensapthom_preprocess_page(&$variables, &$form_state){
-    // $site_config = \Drupal::config('system.site');
-    // $variables['site_name'] = $site_config->get('name');
+     $site_config = \Drupal::config('system.site');
+     $variables['site_name'] = $site_config->get('name');
     // $variables['site_slogan'] = $site_config->get('slogan');
 
     // // logo needs to be placed within specified folder
