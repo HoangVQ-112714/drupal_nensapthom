@@ -7,8 +7,15 @@
   box-sizing: border-box;
 }
 
-#header {
-  background-color: yellowgreen;
+body {
+  background-color: #FFFFFF;
+}
+
+body[route-name="view.frontpage.page_1"] header#page-front_header {
+  background-color: yellow;
+  max-width: 1220px;
+  min-width: 960px;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
