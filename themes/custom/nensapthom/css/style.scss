@@ -10,9 +10,14 @@
 @import "./general/_general";
 
 // Header
-@import "./header/header_front";
-@import "./header/header";
+@import "./header/_header_front";
+@import "./header/_header";
 
 // Body
+@import "./body/_body_front";
 
 // Footer
+
+//Content
+@import "./content/_teaser";
+@import "./content/_full";

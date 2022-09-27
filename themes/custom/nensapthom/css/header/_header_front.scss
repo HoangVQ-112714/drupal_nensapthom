@@ -1,6 +1,55 @@
-body[route-name="view.frontpage.page_1"] header#page-front_header{
-  background-color: yellow;
-  max-width: 1220px;
-  min-width: 960px;
-  margin: auto;
+header#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: $color-first;
+  height: $height_header_front-page;
+  border-bottom: 1px solid;
+
+  div.section.layout-container.clearfix {
+    max-width: 1220px;
+    min-width: 960px;
+    margin: auto;
+    height: $height_header_front-page;
+
+    div{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .header-right {
+        display: flex;
+        flex-direction: row;
+  
+        .icon {
+          margin: auto 0;
+          margin-right: 15px;
+          display: flex;
+  
+          &:last-child {
+            margin-right: 0;
+          }
+  
+          a {
+            text-decoration: none;
+            color: $color-second;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: $font-size-third;
+            font-weight: 500;
+  
+            &:hover {
+              color: $color-third;
+            }
+  
+            i {
+              display: flex;
+              flex-direction: column;
+              font-size: $font-size-second;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,14 @@
 <?php
 
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\taxonomy\Entity\Term;
+
+function nensapthom_preprocess_html($variables)
+{
+  $variables['attributes']['route-name'] = \Drupal::routeMatch()->getRouteName();
+}
+
+
 /**
  * Implements hook_preprocess_page().
  *
@@ -10,10 +19,13 @@ function nensapthom_preprocess_page(&$variables, &$form_state)
   // print_r($route_name);
   // die();
 
+  //TODO: Check login
+  $checkLogin = \Drupal::currentUser()->isAuthenticated();
+
 
   $site_config = \Drupal::config('system.site');
   $variables['site_name'] = $site_config->get('name');
-  // $variables['site_slogan'] = $site_config->get('slogan');
+  $variables['site_slogan'] = $site_config->get('slogan');
 
   // // logo needs to be placed within specified folder
   // $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('./images/logo_web.jpg')));
@@ -27,17 +39,43 @@ function nensapthom_preprocess_page(&$variables, &$form_state)
   // $route_name = $url_object->getRouteName();
   // $route_parameters = $url_object->getRouteParameters();
 
-  // $form_state->setRedirect($route_name,$route_parameters);
-  // print_r($form_state);
-  // die();
 
 
-  // $variables['route_name'] = \Drupal::routeMatch()->getRouteName();
-  // print_r($variables['route_name']);
-  // die();
+  //TODO: Get block trending now for page-front
+  // $block = \Drupal::entityTypeManager()->getStorage('block')->load('trending_now');
+  // $block_trending_now = \Drupal::entityTypeManager()->getViewBuilder('block')->view($block);
+  // $build = [
+  //   'block_trending_now' => $block_trending_now,
+  // ];
+
+  // $bid = 'trending_now';
+  // $block_content = BlockContent::load($bid);
+
+  // $rendered_block = \Drupal::entityTypeManager()
+  //   ->getViewBuilder('block_content')
+  //   ->view($block_content);
+
+  // $build = [
+  //   '#theme' => 'my_module_my_template',
+  //   '#my_block' => $rendered_block,
+  // ];
 }
 
-function nensapthom_preprocess_html($variables)
+/**
+ * Implements hook_preprocess_node().
+ */
+function nensapthom_preprocess_node(&$variables)
 {
-  $variables['attributes']['route-name'] = \Drupal::routeMatch()->getRouteName();
+  $node = $variables['node'];
+  if ($node->bundle() == 'blog') {
+    // Array of terms
+    $terms = [];
+    $categories = $node->field_category->getValue();
+    foreach ($categories as $category) {
+      $term = Term::load($category['target_id']);
+      $result = $term->label();
+      $terms[] = $result;
+    }
+    $variables['list_terms_id_variable'] = $terms;
+  }
 }

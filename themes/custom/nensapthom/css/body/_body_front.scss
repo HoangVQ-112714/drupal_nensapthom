@@ -1,0 +1,126 @@
+div#menu-list {
+  margin-top: $height_header_front-page;
+
+  nav#block-nensapthom-main-menu {
+    display: flex;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin: 30px auto 18px;
+
+      li {
+        list-style-type: none;
+        border-right: 1px solid $color-fifth;
+        padding: 0 25px;
+
+        &:last-child {
+          border-right: none;
+        }
+
+        a {
+          font-size: 1rem;
+          font-weight: 400;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $color-seventh;
+          font-family: $font-family-second;
+
+          &:hover {
+            color: $color-fourth;
+            font-weight: 550;
+          }
+        }
+      }
+    }
+  }
+}
+
+div.featured-top {
+  display: flex;
+
+  aside.featured-top__inner.section.layout-container.clearfix {
+    max-width: 1220px;
+    min-width: 960px;
+    margin: auto;
+
+    div {
+      display: flex;
+
+      div#block-views-block-trending-now-front-trending-now {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: auto;
+
+        h2 {
+          font-family: $font-family-third;
+          font-weight: 400;
+          font-size: 1rem;
+          letter-spacing: 0.05em;
+          line-height: 2.5;
+          text-transform: uppercase;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          list-style-type: none;
+
+          li {
+            margin-left: 10px;
+            padding: 4px 12px;
+            background-color: $color-sixth;
+            border-radius: 4px;
+
+            a {
+              text-decoration: none;
+              text-transform: uppercase;
+              font-size: 1.1rem;
+              color: $color-first;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+main#content {
+  width: 100%;
+  background-color: #f4f5fa;
+
+  .section {
+    padding: 0 75px;
+
+    div {
+      display: flex;
+      flex-direction: row;
+
+      #block-views-block-display-position-1-display-position-1-left {
+        width: 58%;
+        padding: 0 15px;
+
+        img{
+            width: 100%;
+            max-height: 362px;
+            min-height: 232px;
+        }
+      }
+
+      #block-views-block-display-position-1-display-position-1-right{
+        width: 42%;
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 90px;
+            height: 90px;
+        }
+      }
+    }
+  }
+}
