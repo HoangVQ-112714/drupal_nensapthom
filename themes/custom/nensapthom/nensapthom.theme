@@ -13,52 +13,16 @@ function nensapthom_preprocess_html($variables)
  * Implements hook_preprocess_page().
  *
  */
-function nensapthom_preprocess_page(&$variables, &$form_state)
+function nensapthom_preprocess_page(&$variables)
 {
   $route_name = \Drupal::routeMatch()->getRouteName();
   // print_r($route_name);
   // die();
 
-  //TODO: Check login
-  $checkLogin = \Drupal::currentUser()->isAuthenticated();
-
-
   $site_config = \Drupal::config('system.site');
   $variables['site_name'] = $site_config->get('name');
   $variables['site_slogan'] = $site_config->get('slogan');
 
-  // // logo needs to be placed within specified folder
-  // $variables['logopath'] = file_url_transform_relative(file_create_url(theme_get_setting('./images/logo_web.jpg')));
-
-
-
-
-  // Get route name from path.
-  // $current_path = \Drupal::service('path.current')->getPath();
-  // $url_object = \Drupal::service('path.validator')->getUrlIfValid($form_state->getValue($current_path));
-  // $route_name = $url_object->getRouteName();
-  // $route_parameters = $url_object->getRouteParameters();
-
-
-
-  //TODO: Get block trending now for page-front
-  // $block = \Drupal::entityTypeManager()->getStorage('block')->load('trending_now');
-  // $block_trending_now = \Drupal::entityTypeManager()->getViewBuilder('block')->view($block);
-  // $build = [
-  //   'block_trending_now' => $block_trending_now,
-  // ];
-
-  // $bid = 'trending_now';
-  // $block_content = BlockContent::load($bid);
-
-  // $rendered_block = \Drupal::entityTypeManager()
-  //   ->getViewBuilder('block_content')
-  //   ->view($block_content);
-
-  // $build = [
-  //   '#theme' => 'my_module_my_template',
-  //   '#my_block' => $rendered_block,
-  // ];
 }
 
 /**
