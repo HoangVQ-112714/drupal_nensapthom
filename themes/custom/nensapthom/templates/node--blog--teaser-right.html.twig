@@ -70,15 +70,9 @@
 #}
 <article{{ attributes }}>
   <div class="image-main">
-    <a id="teaser-image-main" href="{{ url }}" rel="bookmark">{{ content.field_image_main }}</a>
+    <a id="teaser-right-image-main" href="{{ url }}" rel="bookmark">{{ content.field_image_main }}</a>
   </div>
-  <div class="teaser-body-content">
-    <div class="categories">
-      {{ list_terms_categories | render }}
-      {% for category_blog in list_terms_categories %}
-      <p>{{ category_blog }}</p>
-      {% endfor %}
-    </div>
+  <div class="teaser-right-body-content">
 
     <div class="title">
       {{ title_prefix }}
@@ -90,12 +84,5 @@
         {{ title_suffix }}
     </div>
 
-    <div class="description-show">
-      {{ content.field_description_show }}
-    </div>
-
-    <div class="readmore-show">
-      <a id="readmore" href="{{ url }}" rel="bookmark">Xem thêm...</a>
-    </div>
   </div>
   </article>

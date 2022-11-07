@@ -84,18 +84,23 @@
       {{ title_prefix }}
       {% if label and not page %}
       <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        <a href="{{ url }}" rel="bookmark">{{ content.title }}</a>
         </h2>
         {% endif %}
         {{ title_suffix }}
     </div>
 
-    <div class="description-show">
-      {{ content.field_description_show }}
+    <div class="content-categories">
+      {{ content.field_category }}
     </div>
 
-    <div class="readmore-show">
-      <a id="readmore" href="{{ url }}" rel="bookmark">Xem thêm...</a>
+    <div class="content-body">
+      {{ content.body }}
     </div>
+
+    <div class="description-comment">
+      {{ content.comment }}
+    </div>
+
   </div>
   </article>

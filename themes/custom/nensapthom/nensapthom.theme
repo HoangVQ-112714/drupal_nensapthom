@@ -40,6 +40,6 @@ function nensapthom_preprocess_node(&$variables)
       $result = $term->label();
       $terms[] = $result;
     }
-    $variables['list_terms_id_variable'] = $terms;
+    $variables['list_terms_categories'] = $terms;
   }
 }

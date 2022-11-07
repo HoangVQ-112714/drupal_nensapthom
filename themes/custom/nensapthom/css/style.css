@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:regular,italic,700);
+@import url(https://fonts.googleapis.com/css?family=Lora:regular,500,600,700,italic,500italic,600italic,700italic);
 @import "https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";
 :root {
@@ -115,6 +117,7 @@ div#menu-list nav#block-nensapthom-main-menu ul li a:hover {
 
 div.featured-top {
   display: flex;
+  margin: 15px 0;
 }
 div.featured-top aside.featured-top__inner.section.layout-container.clearfix {
   max-width: 1220px;
@@ -168,25 +171,176 @@ main#content .section {
 main#content .section div {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-main#content .section div #block-views-block-display-position-1-display-position-1-left {
+main#content .section div #block-views-block-display-position-display-position-1-left {
   width: 58%;
   padding: 0 15px;
 }
-main#content .section div #block-views-block-display-position-1-display-position-1-left img {
+main#content .section div #block-views-block-display-position-display-position-1-left li {
+  list-style-type: none;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article {
+  display: flex;
+  flex-direction: column;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article a#teaser-image-main {
+  width: 100%;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article a#teaser-image-main img {
   width: 100%;
   max-height: 362px;
   min-height: 232px;
 }
-main#content .section div #block-views-block-display-position-1-display-position-1-right {
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content {
+  background-color: #FFFFFF;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .categories p {
+  font-size: 0.8rem;
+  color: #154084;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  margin-bottom: 0;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .categories p::after {
+  content: "|";
+  margin-left: 10px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .categories p + p {
+  margin: 0 10px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .categories p:last-child {
+  margin-right: 0;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .categories p:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .title a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 600;
+  font-family: "Libre Baskerville";
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .description-show {
+  font-size: 0.9rem;
+  color: #333333;
+  margin-bottom: 18px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .readmore-show {
+  margin: 10px 12px 10px 0;
+}
+main#content .section div #block-views-block-display-position-display-position-1-left li article .teaser-body-content .readmore-show a#readmore {
+  color: #FFFFFF;
+  background-color: #DC3623;
+  padding: 14px 25px 10px;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right {
   width: 42%;
   padding: 0 15px;
   display: flex;
   flex-direction: column;
 }
-main#content .section div #block-views-block-display-position-1-display-position-1-right img {
+main#content .section div #block-views-block-display-position-display-position-1-right h2 {
+  border-top: 3px solid #222533;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Libre Baskerville";
+  padding-top: 10px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li {
+  list-style-type: none;
+  background-color: #FFFFFF;
+  margin-bottom: 15px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li:last-child {
+  margin-bottom: 0;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article {
+  display: flex;
+  flex-direction: row;
+  padding: 0 15px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article .image-main {
   width: 90px;
   height: 90px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article .image-main a#teaser-right-image-main {
+  width: 100%;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article .image-main a#teaser-right-image-main img {
+  width: 100%;
+  height: 100%;
+  max-width: 90px;
+  max-height: 90px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article .teaser-right-body-content {
+  padding: 7.5px 7.5px 7.5px 15px;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article .teaser-right-body-content h2 {
+  border-top: none;
+}
+main#content .section div #block-views-block-display-position-display-position-1-right li article .teaser-right-body-content h2 a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.1rem;
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+  background-color: #154084;
+  margin-top: 100px;
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories h2 {
+  margin: 24px auto 10px;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Libre Baskerville";
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories div {
+  width: 100%;
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories div .item-list {
+  width: 100%;
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories div .item-list ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 15px;
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories div .item-list ul li {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 30px 10px;
+  text-align: center;
+}
+main#content .section div #block-views-block-page-front-categories-trending-trending-categories div .item-list ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 600;
+  font-family: "Josefin Sans";
+}
+
+main#content article {
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
